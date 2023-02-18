@@ -1,0 +1,288 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/hero.astro";
+import Hero2 from "../components/hero2.astro";
+---
+
+<Layout title="Peninsula Inversiones">
+    <script>
+        function sendEmail() {
+            let nombre = document.getElementById("nombre")?.value;
+            let correo = document.getElementById("correo")?.value;
+            let celular = document.getElementById("celular")?.value;
+            let mensaje = document.getElementById("mensaje")?.value;
+            window.open(
+                `mailto:alextrevinom@yahoo.com.mx?subject=cliente_nuevo&body=nombre:${nombre}%0Acorreo:${correo}%0Acelular:${celular}%0Amensaje:${mensaje}`
+            );
+        }
+
+        function sendWhatsapp() {
+            let nombre = document.getElementById("nombre")?.value;
+            let correo = document.getElementById("correo")?.value;
+            let celular = document.getElementById("celular")?.value;
+            let mensaje = document.getElementById("mensaje")?.value;
+            window.open(
+                `https://api.whatsapp.com/send?phone=528182870440&text=nombre:${nombre}%0Acorreo:${correo}%0Acelular:${celular}%0Amensaje:${mensaje}`
+            );
+        }
+        document.getElementById("Email")?.addEventListener("click", sendEmail);
+        document
+            .getElementById("Whatsapp")
+            ?.addEventListener("click", sendWhatsapp);
+    </script>
+    <main class="h-screen overflow-x-hidden snap-y">
+        <div class="invisible md:visible  navbar bg-base-200 h-24 fixed z-10 ">
+            <div class="flex-1">
+                <a class="" href="#cover"
+                    ><img src="/Logo.png" class="w-20 rounded-md" /></a
+                >
+            </div>
+            <div class="flex-none">
+                <ul class="menu menu-horizontal px-1">
+                    <li><a href="#quienesSomos">Who Are We</a></li>
+                    <li><a href="#queOfrecemos">What do we Offer</a></li>
+                    <li><a href="#nuestrosClientes">Our Clients</a></li>
+                    <li><a href="#costos">Costs</a></li>
+                    <li><a href="#amenidades">Amenities</a></li>
+                    <li><a href="#nuestrasVentajas">Our Advantages</a></li>
+                    <li><a href="#mejorInversion">Best Investment</a></li>
+                    <li><a href="#oportunidades">Oportunities</a></li>
+                    <li><a href="#contacto">Contact</a></li>
+                    <li tabindex="0">
+                        <a>
+                            Languages
+                            <svg
+                                class="fill-current"
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="20"
+                                height="20"
+                                viewBox="0 0 24 24"
+                                ><path
+                                    d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"
+                                ></path></svg
+                            >
+                        </a>
+                        <ul class="p-2 bg-base-300">
+                            <li><a href="/">Spanish</a></li>
+                            <li><a href="/en">English</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div
+            class="hero min-h-screen snap-start"
+            id="cover"
+            style="background-image: url('/Portada.gif');"
+        >
+            <a class="visible md:invisible btn absolute z-10 top-3 left-3" href="/">Español</a>
+            <div class="hero-overlay bg-opacity-60"></div>
+            <div class="hero-content text-center text-neutral-content">
+                <div class="">
+                    <h1 class="mb-5 md:text-5xl text-3xl font-bold">
+                        Peninsula Investments
+                    </h1>
+                </div>
+            </div>
+        </div>
+        <Hero title="Who Are We" image="/Momchild.jpg" id="quienesSomos">
+            <p class="py-6 w-full text-xl">
+                Peninsula Investments is a consulting firm whose mission is to
+                link people that love the Yucatan Peninsula and want to invest,
+                in a smart and safe way, on real state opportunities in a
+                development and/or an early stage, which let you obtain capital
+                gain never seen before.
+            </p>
+        </Hero>
+        <Hero2 title="What Do We Offer" image="/beach.jpg" id="queOfrecemos">
+            <p class="py-6 w-full text-xl">
+                We offer a variety of options to make your investment grow in a
+                safe way. We only work with real state companies that offer a
+                capital gain that matches no other and warranties your heritage.
+            </p>
+        </Hero2>
+        <Hero
+            title="Who Are Our Customers?"
+            image="/beachfriends.jpg"
+            id="nuestrosClientes"
+        >
+            <p class="py-6 w-full text-xl">
+                Any family, person or company that wants to make smart
+                investments in the Riviera Maya and the Yucatan Peninsula.
+                <br /><br />
+                Join the families and people who decided to take the first step towards
+                their dream of having a property in paradise near the beach and,
+                not only surrounded by nature, but also with the perks of living
+                in a big city.
+                <br /><br />
+                Acquiring land in privileged areas is now within your reach. Those
+                who have already done so, with our advice, realized that it only
+                requires an incredibly low initial investment and easy monthly payments
+                with no interest.
+            </p>
+        </Hero>
+        <Hero2 title="Costs" image="/vacation.jpg" id="costos">
+            <ul class="list-disc text-start text-xl ml-10 py-6">
+                <li>
+                    Our client does not pay any type of fees or commissions.
+                </li>
+                <li>
+                    We assure you the best prices and discounts with total
+                    transparency.
+                </li>
+                <li>
+                    Our involvement does not make your investment more
+                    expensive, on the contrary, we support you to get the best
+                    market value.
+                </li>
+                <li>
+                    We have access to investment lots as low as $7,500 USD with
+                    a 10% down payment and monthly payments starting in $100
+                    USD.
+                </li>
+            </ul>
+        </Hero2>
+        <Hero title="Amenities" image="/volleyball.jpg" id="amenidades">
+            <p class="py-6 w-full text-xl text-start">
+                Main amenities that our partners offer:
+            </p>
+
+            <ul class="list-disc text-start text-xl mx-10">
+                <li>Proximity to the Beach or Archaeological Zones</li>
+                <li>Club House, Sports or Beach Club</li>
+                <li>Tracks, fields, green areas, lakes or Cenotes</li>
+                <li>Controlled access</li>
+                <li>Commercial areas with high added value</li>
+                <li>And much more.</li>
+            </ul>
+        </Hero>
+        <Hero2
+            title="Why Are We The Best Choice?"
+            image="/family.jpg"
+            id="nuestrasVentajas"
+        >
+            <p class="py-6 w-full text-xl">
+                We discovered this great opportunity investing ourselves and
+                learning along the way. Now we want to share with you what we
+                experienced and the best opportunities to be closer to paradise.
+                <br /><br />
+                Our recommendations are tailored to your needs.
+                <br /><br />
+                We have access to Land, Houses and Apartments always with opportunity
+                to offer you the greatest capital gains and benefits according to
+                your needs.
+            </p>
+        </Hero2>
+        <Hero
+            title="What Is The Best Investment"
+            image="/coconut.jpg"
+            id="mejorInversion"
+        >
+            <h3 class="w-full text-lg font-bold py-1">
+                Land - House - Apartment
+            </h3>
+
+            <ul class="list-disc text-start text-lg mx-10">
+                <li class="w-full text-lg text-start">
+                    It all depends on your needs.
+                </li>
+            </ul>
+            <h3 class="w-full text-lg font-bold py-1">
+                Acquiring an investment land :
+            </h3>
+            <ul class="list-disc text-start text-lg mx-10">
+                <li>
+                    Gives you the possibility of buying at a very low price,
+                    earning capital gains of between 200% to 1000% upon
+                    delivery.
+                </li>
+                <li>
+                    Allows you not to pay full price all as once, instead begin
+                    with a small down payment and pay the rest in up to 72
+                    monthly payments with no interest.
+                </li>
+                <li>You have access to the land when you finish paying.</li>
+                <li>You can build a project to suit your needs.</li>
+            </ul>
+            <h3 class="w-full text-lg font-bold py-1">
+                A House or an Apartment in pre-sale:
+            </h3>
+
+            <ul class="list-disc text-start text-lg mx-10">
+                <li>
+                    Achieves an annual capital gain of around 15% to 30% in the
+                    first year.
+                </li>
+                <li>
+                    Requires payment in full or mortgage credit against
+                    delivery.
+                </li>
+                <li>It's enjoyed quicker.</li>
+            </ul>
+        </Hero>
+        <Hero2 title="Opportunities" image="/maya.jpg" id="oportunidades">
+            <h3 class="w-full text-lg font-bold py-1">
+                Today we have different opportunities in:
+            </h3>
+
+            <ul class="list-disc text-start text-lg mx-10">
+                <li>Playa del Carmen, Quintana Roo</li>
+                <li>Tulum, Quintana Roo</li>
+                <li>Cancun, Quintana Roo</li>
+                <li>Cancun, Quintana Roo</li>
+                <li>Sisal, Yucatan</li>
+                <li>Valladolid, Yucatan</li>
+                <li>Izamal, Yucatan</li>
+            </ul>
+        </Hero2>
+        <div class="hero min-h-[50vh] min-w-[70vw] bg-base-200" id="contacto">
+            <div
+                class="hero-content flex-col lg:flex-row-reverse justify-evenly"
+            >
+                <img
+                    src="/beach2.jpg"
+                    class="w-96 md:w-2/5 rounded-lg shadow-2xl"
+                />
+                <div class="text-center">
+                    <h1 class="text-4xl font-bold">Let's get In Contact</h1>
+
+                    <div class="flex flex-col space-y-5 my-5">
+                        <input
+                            class="input input-bordered"
+                            id="nombre"
+                            placeholder="Name"
+                        />
+                        <input
+                            class="input input-bordered"
+                            id="correo"
+                            placeholder="Email"
+                        />
+                        <input
+                            class="input input-bordered"
+                            id="celular"
+                            placeholder="Phone Number"
+                        />
+                        <textarea
+                            class="textarea textarea-bordered"
+                            id="mensaje"
+                            placeholder="Message (optional)"></textarea>
+                    </div>
+                    <div class="flex w-full justify-between">
+                        <button id="Email" class="btn btn-info ml-2"
+                            >Email<img
+                                src="https://cdn-icons-png.flaticon.com/512/542/542689.png"
+                                class="w-5 ml-2"
+                            /></button
+                        >
+                        <button id="Whatsapp" class="btn btn-success ml-2"
+                            >Whatsapp <img
+                                src="https://cdn-icons-png.flaticon.com/512/152/152740.png"
+                                class="w-5 ml-2"
+                            /></button
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</Layout>
