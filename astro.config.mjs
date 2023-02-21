@@ -6,6 +6,5 @@ import tailwind from "@astrojs/tailwind";
 // https://astro.build/config
 export default defineConfig({
     integrations: [tailwind()],
-    site: "http://playainversiones.com",
-    base:'/'
+    site: "https://playainversiones.com",
 });
